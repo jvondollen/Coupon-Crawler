@@ -27,7 +27,7 @@ f.write("Name,Price,Qprice,Desc,Expir\n")	#write Headers to files
 for j in range(1, numpages+1):
 	print("Page %s of %s" % (j,numpages) )
 
-	sock = urllib.urlopen("http://www.albertsons.com/savings/view-ads/view-circular.html?circularId=85916&sneakPeek=false&storeId=6390&currentPageNumber=" + str(j))
+	sock = urllib.urlopen("http://www.albertsons.com/savings/view-ads/view-circular.html?&storeId=6390&currentPageNumber=" + str(j))
 	htmlSource = sock.read()
 	sock.close()
 
